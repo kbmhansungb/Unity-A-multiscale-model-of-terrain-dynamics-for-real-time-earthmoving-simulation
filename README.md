@@ -4,7 +4,7 @@
 
 ## Install
 
-유니티 프로젝트 2022.3.12f1를 이용합니다.
+유니티 프로젝트 2022.3.12f1, URP를 이용합니다.
 
 설치해야할 유니티 패키지는 다음과 같습니다.
 * [TerrainTools](https://docs.unity3d.com/Packages/com.unity.terrain-tools@5.0/manual/index.html)

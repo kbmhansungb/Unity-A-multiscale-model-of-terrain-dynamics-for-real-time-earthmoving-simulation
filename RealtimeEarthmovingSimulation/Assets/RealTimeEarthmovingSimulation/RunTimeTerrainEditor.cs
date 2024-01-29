@@ -5,6 +5,7 @@ namespace TerrainEditor
     public sealed class RunTimeTerrainEditor : MonoBehaviour
     {
         [SerializeField] private Terrain terrain;
+        [SerializeField] private GameObject DebrisPrefab;
         private TerrainData terrainData;
 
         private void Awake()
@@ -26,6 +27,9 @@ namespace TerrainEditor
                 }
             }
             terrainData.SetHeights(brush.baseX, brush.baseY, heights);
+
+            // 파편을 스폰합니다.
+            var debris = Instantiate(DebrisPrefab, worldPosition, Quaternion.identity);
         }
 
         private Vector3 WorldToTerrainPosition(Vector3 worldPosition)

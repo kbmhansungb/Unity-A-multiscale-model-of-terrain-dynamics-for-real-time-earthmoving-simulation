@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9170226165208009468}
+  - component: {fileID: 2354845738556612141}
   - component: {fileID: 5476240023373705702}
   - component: {fileID: 1680524447657206952}
-  - component: {fileID: 2354845738556612141}
   m_Layer: 6
   m_Name: Terrain
   m_TagString: Untagged
@@ -34,6 +34,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2354845738556612141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7776576265372176777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ffb401980bb9504981a555701259ce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 5476240023373705702}
+  debrisSize: 0.05
+  DebrisPrefab: {fileID: 2169046498386817464, guid: ea80bf4c78056504cb4d0c5b37564f67, type: 3}
 --- !u!218 &5476240023373705702
 Terrain:
   m_ObjectHideFlags: 0
@@ -93,17 +108,3 @@ TerrainCollider:
   serializedVersion: 2
   m_TerrainData: {fileID: 15600000, guid: a11ea451a07e9d74ba3c3adc07b551e9, type: 2}
   m_EnableTreeColliders: 1
---- !u!114 &2354845738556612141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7776576265372176777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ffb401980bb9504981a555701259ce7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  terrain: {fileID: 5476240023373705702}
-  DebrisPrefab: {fileID: 2169046498386817464, guid: ea80bf4c78056504cb4d0c5b37564f67, type: 3}

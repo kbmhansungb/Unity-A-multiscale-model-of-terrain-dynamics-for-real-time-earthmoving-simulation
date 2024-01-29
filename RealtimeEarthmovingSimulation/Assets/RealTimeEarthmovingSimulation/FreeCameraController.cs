@@ -1,4 +1,4 @@
-using TerrainEditor;
+using TerrainSystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
@@ -6,7 +6,7 @@ using UnityEngine.Rendering;
 public class FreeCameraController : MonoBehaviour
 {
     public FreeCamera FreeCamera;
-    public RunTimeTerrainEditor terrainEditor;
+    public RunTimeTerrainSystem terrainEditor;
 
     [Header("Input")]
     public InputAction ActiveCameraInputAction;
@@ -45,7 +45,7 @@ public class FreeCameraController : MonoBehaviour
         if (Physics.Raycast(ray, out var hit, 1000, LayerMask.GetMask("Terrain")))
         {
             // 레이케스트가 지형에 맞았다면, 지형을 편집합니다.
-            terrainEditor.TestCall(hit.point);
+            terrainEditor.TestActiveSoil(hit.point);
             //DebrisSpawnerSystem.spawnPosition.Add(new System.Numerics.Vector3(hit.point.x, hit.point.y, hit.point.z));
         }
     }
